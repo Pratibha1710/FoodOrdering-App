@@ -121,7 +121,7 @@ val foodItems = listOf(
     ),
     FoodItem(
         id = 17L,
-        name = "Smoothies",
+        name = "Soap",
         tagline = "Testy and Nutritious!",
         imageUrl = "https://cdn.pixabay.com/photo/2016/10/13/05/16/thai-curry-1736806_960_720.jpg",
         price = 199
