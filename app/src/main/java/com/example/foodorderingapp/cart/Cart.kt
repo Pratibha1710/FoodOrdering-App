@@ -57,7 +57,6 @@ import com.example.foodorderingapp.model.FoodCollection
 import com.example.foodorderingapp.model.FoodRepo
 import com.example.foodorderingapp.model.OrderLine
 
-
 @Composable
 fun Cart(
     onFoodItemClick: (Long) -> Unit,
@@ -406,5 +405,5 @@ fun SummaryItem(
         }
         Divider()
     }
-
 }
+

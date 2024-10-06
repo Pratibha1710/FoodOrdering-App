@@ -32,6 +32,7 @@ import com.example.foodorderingapp.ui.theme.FoodiaTheme
 class MainActivity : ComponentActivity() {
     private val onBoardingViewModel: OnBoardingViewModel by viewModels()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen().setKeepOnScreenCondition {
@@ -50,7 +51,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @Composable
+@Composable
     fun FoodiaApp(onBoardingViewModel: OnBoardingViewModel) {
 
         val navController = rememberNavController()
@@ -85,12 +86,14 @@ class MainActivity : ComponentActivity() {
                                     Icon(
                                         imageVector = route.icon,
                                         contentDescription = route.title,
-                                    )
+
+                                        )
                                 },
                                 text = {
                                     Text(text = route.title)
                                 }
                             )
+
                         }
                     }
                 }
@@ -104,3 +107,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+

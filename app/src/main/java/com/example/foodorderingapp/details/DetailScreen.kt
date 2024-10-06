@@ -344,6 +344,12 @@ private fun DetailBottomBar(
 
 
 fun formatPrice(price: Long): String {
-    return NumberFormat.getCurrencyInstance()
-        .format(BigDecimal(price).movePointLeft(2))
+    return NumberFormat.getCurrencyInstance(java.util.Locale("en", "IN"))
+        .format(BigDecimal(price).movePointLeft(0))
+
 }
+
+
+
+
+

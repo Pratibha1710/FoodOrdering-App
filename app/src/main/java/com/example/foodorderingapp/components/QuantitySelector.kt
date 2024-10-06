@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.foodorderingapp.cart.Cart
 import com.example.foodorderingapp.ui.theme.Caramel80
 import com.example.foodorderingapp.ui.theme.Orange40
 
@@ -122,6 +123,7 @@ fun GradientTintedIcon(
                 onClick = onClick,
                 interactionSource = interactionSources,
                 indication = null
+
             )
             .clip(CircleShape)
             .then(border)
@@ -130,10 +132,14 @@ fun GradientTintedIcon(
     ) {
 
         Icon(
+
             imageVector = imageVector,
             contentDescription = contentDescription,
             modifier = modifierColor,
         )
     }
+
+
+
 
 }

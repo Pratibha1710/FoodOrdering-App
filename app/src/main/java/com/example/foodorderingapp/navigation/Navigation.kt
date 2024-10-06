@@ -15,12 +15,11 @@ import androidx.navigation.navArgument
 import com.example.foodorderingapp.cart.Cart
 import com.example.foodorderingapp.details.FoodDetail
 import com.example.foodorderingapp.home.Feed
-import com.example.foodorderingapp.model.OnBoardingItem
 import com.example.foodorderingapp.onboarding.OnBoardingScreen
 
 const val OnBoardingRoute = "OnBoarding"
 const val DetailRoute = "DetailScreen"
-
+const val Onboarding ="LoginScreen"
 
 enum class Tabs(
     val title: String,
@@ -46,16 +45,19 @@ fun FoodOrderingAppNavigationHost(
             arguments = listOf(navArgument("id") {}),
         ) { from ->
             val id = from.arguments?.getString("id") ?: "1"
-            FoodDetail(foodId = id.toLong()) {
+            FoodDetail(foodId = id.toLong () )  {
                 navController.navigateUp()
             }
         }
+
 
         composable(route = Tabs.Cart.route) { from ->
             Cart(
                 onFoodItemClick = { id -> },
                 modifier = modifier
+
             )
+
         }
         composable(route = OnBoardingRoute) { from ->
             OnBoardingScreen {
@@ -63,11 +65,7 @@ fun FoodOrderingAppNavigationHost(
             }
         }
     }
-
-
 }
-
-
 fun NavController.navigateToBottomBarRoute(route: String) {
     val currentRoute = currentDestination?.route
     if (route != currentRoute) {
@@ -80,3 +78,10 @@ fun NavController.navigateToBottomBarRoute(route: String) {
         }
     }
 }
+
+
+
+
+
+
+
